@@ -61,6 +61,10 @@ body .header-image{
 //     box-shadow: 0px 0px 5px 6px rgba(255,255,255,0.75);
 // }
 
+article{
+    margin-top: 10px;
+}
+
 article > div{
     padding: 10px;
     background: rgba(0,0,0,0.5);
@@ -90,7 +94,13 @@ article .btn{
 article .btn:hover{
     color: $white;
     background: $red;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px 2px rgba(255,255,255,0.75);
 }
+
+// article .btn:hover::after{
+//     content: "->";
+// }
 
 .meta{
     margin-top: 10px;

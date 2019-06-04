@@ -39,6 +39,10 @@ body .header-image {
   width: 100%;
 }
 
+article {
+  margin-top: 10px;
+}
+
 article > div {
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
@@ -68,6 +72,9 @@ article .btn {
 article .btn:hover {
   color: #fdfdfd;
   background: #d60004;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.75);
+          box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.75);
 }
 
 .meta {
