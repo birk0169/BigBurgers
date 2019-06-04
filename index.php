@@ -40,7 +40,7 @@
             <!-- Header Image -->
             <div class="row">
                 <div class="col px-0">
-                    <img class="header-image img-fluid px-0" src="img\header-image-3.jpg" alt="">
+                    <img class="header-image img-fluid px-0" src="img\header-image-3.jpg" alt="Burger Resturant">
                 </div>
             </div>
         </header>
@@ -48,7 +48,7 @@
         <main>
             <div class="row background-black">
                 <div class="col-lg-3 col-md-5">
-                    <h2>BIG Burger</h2>
+                    <h2><span class="cursive">BIG</span> Burger</h2>
                 </div>
                 <div class="col-lg-9 col-md-7">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatem officiis magnam ipsam odio officia cupiditate laborum cumque pariatur odit assumenda, aut nesciunt reiciendis ut, illum beatae, explicabo velit accusamus?</p>
@@ -58,7 +58,7 @@
             
             <div class="row">
                 <article class="col-md-4">
-                    <img class="img-fluid" src="img/burger-1.png" alt="">
+                    <img class="img-fluid" src="img/burger-1.png" alt="The classic and tasty Big Burger">
                     <div>
                         <h3>Big Burger</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus distinctio expedita quod porro consectetur? Quia error autem saepe ex ipsum officiis corrupti minima, blanditiis, debitis accusamus animi culpa veritatis!</p>
@@ -66,7 +66,7 @@
                     </div>
                 </article>
                 <article class="col-md-4">
-                    <img class="img-fluid" src="img/burger-2.png" alt="">
+                    <img class="img-fluid" src="img/burger-2.png" alt="The Bigger Burger with extra crispy bacon">
                     <div>
                         <h3>Bigger Burger</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus distinctio expedita quod porro consectetur? Quia error autem saepe ex ipsum officiis corrupti minima, blanditiis, debitis accusamus animi culpa veritatis!</p>
@@ -74,7 +74,7 @@
                     </div>
                 </article>
                 <article class="col-md-4">
-                    <img class="img-fluid" src="img/burger-3.png" alt="">
+                    <img class="img-fluid" src="img/burger-3.png" alt="The fluffy and juicy Shroom Burger">
                     <div>
                         <h3>Big Shroom Burger</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus distinctio expedita quod porro consectetur? Quia error autem saepe ex ipsum officiis corrupti minima, blanditiis, debitis accusamus animi culpa veritatis!</p>

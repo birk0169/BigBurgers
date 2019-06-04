@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+
+
+//Variables
 $black: rgba(0,0,0,0.5);
 $grey: #252a30;
 $white: #fdfdfd;
 $red: #d60004;
 
-p{
+*{
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, a{
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
@@ -39,14 +45,22 @@ body .header-image{
 }
 
 
-//main
+//Main
 main div{
     
 }
 
+//Article
+// article{
+//     box-shadow: 0px 0px 5px 6px rgba(255,255,255,0.75);
+// }
+
 article div{
     padding: 10px;
     background: rgba(0,0,0,0.5);
+    //Not sure on this one \/
+    box-shadow: 0px 0px 3px 1px rgba(255,255,255,0.75);
+    margin-top: 10px;
 }
 
 article h3{
