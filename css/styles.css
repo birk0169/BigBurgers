@@ -1,1 +1,75 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+p {
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+body {
+  background: url(../img/background.jpg);
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 75px;
+}
+
+.logo {
+  max-height: 150px;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: #fdfdfd;
+}
+
+.navbar-expand-md .navbar-collapse {
+  border-bottom: 1px solid #fdfdfd;
+}
+
+body .header-image {
+  width: 100%;
+}
+
+article div {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+article h3 {
+  text-align: center;
+}
+
+article button {
+  width: 60%;
+  border-radius: 5px;
+}
+
+article .btn {
+  display: block;
+  margin: 0 auto;
+  color: #fdfdfd;
+  background: #252a30;
+  border: 1px solid darkgrey;
+  padding: 10px;
+}
+
+article .btn:hover {
+  color: #fdfdfd;
+  background: #d60004;
+}
+
+.background-black {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*# sourceMappingURL=styles.css.map */
