@@ -7,6 +7,8 @@ $grey: #252a30;
 $white: #fdfdfd;
 $red: #d60004;
 
+
+//Typography
 *{
     color: white;
     font-family: 'Raleway', sans-serif;
@@ -17,6 +19,11 @@ h1, h2, h3, h4, h5, h6, a{
     font-family: 'Montserrat', sans-serif;
 }
 
+.cursive{
+    font-style: italic;
+}
+
+//Body
 body{
     background: url(../img/background.jpg);
     background-position: cover;

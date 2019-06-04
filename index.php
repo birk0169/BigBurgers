@@ -29,8 +29,8 @@
                     <div class="collapse navbar-collapse" id="mainNav">
                         
                         <div class="navbar-nav">
-                            <a href="#" class="nav-item nav-link active">Home</a>
-                            <a href="#" class="nav-item nav-link">Shop</a>
+                            <a href="index.php" class="nav-item nav-link active">Home</a>
+                            <a href="shop.php" class="nav-item nav-link">Shop</a>
                             <a href="#" class="nav-item nav-link">Contact</a>
                             <a href="#" class="nav-item nav-link mr-auto">Login</a>
                         </div>
