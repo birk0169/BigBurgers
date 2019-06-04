@@ -39,7 +39,7 @@ body .header-image {
   width: 100%;
 }
 
-article div {
+article > div {
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.75);
@@ -47,7 +47,7 @@ article div {
   margin-top: 10px;
 }
 
-article h3 {
+article h3, article h4 {
   text-align: center;
 }
 
@@ -68,6 +68,14 @@ article .btn {
 article .btn:hover {
   color: #fdfdfd;
   background: #d60004;
+}
+
+.meta {
+  margin-top: 10px;
+}
+
+.meta p {
+  color: grey;
 }
 
 .background-black {
