@@ -3,6 +3,7 @@
 
 //Variables
 $black: rgba(0,0,0,0.5);
+$lighter: rgba(255,255,255,.5);
 $grey: #252a30;
 $lightgrey: grey;
 $white: #fdfdfd;
@@ -32,70 +33,80 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin-bottom: 75px;
+    margin-bottom: 67px;
 }
 
 //nav
 .logo{
-    max-height: 150px;
+    max-height: 100px;
 }
 
-.navbar-dark .navbar-toggler{
-    border-color: $white;
+.navbar-dark{
+    .navbar-toggler{
+        border-color: $white;
+        border-radius: .125rem;
+    }
+
+    a{
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-link.active{
+        background: $white;
+        color: black;
+        border-radius: 0.25rem;
+    }
 }
 
-.navbar-expand-md .navbar-collapse{
-    border-bottom: 1px solid $white;
+@media screen and(min-width: 768px){
+    .navbar-expand-md .navbar-collapse{
+        border-bottom: 1px solid $white;
+    }
 }
 
 body .header-image{
     width: 100%;
+    border-top: 1px solid $lighter;
 }
 
 
 //Main
 
-
-//Article
-// article{
-//     box-shadow: 0px 0px 5px 6px rgba(255,255,255,0.75);
-// }
-
 article{
     margin-top: 10px;
-}
 
-article > div{
-    padding: 10px;
-    background: rgba(0,0,0,0.5);
-    //Not sure on this one \/
-    box-shadow: 0px 0px 3px 1px rgba(255,255,255,0.75);
-    margin-top: 10px;
-}
+    > div{
+        padding: 10px;
+        background: rgba(0,0,0,0.5);
+        //Not sure on this one \/
+        box-shadow: 0px 0px 3px 1px rgba(255,255,255,0.75);
+        margin-top: 10px;
+    }
 
-article h3, article h4{
-    text-align: center;
-}
+    h3, article h4{
+        text-align: center;
+    }
 
-article button{
-    width: 60%;
-    border-radius: 5px;
-}
+    button{
+        width: 60%;
+        border-radius: 5px;
+    }
 
-article .btn{
-    display: block;
-    margin: 0 auto;
-    color: $white;
-    background: $grey;
-    border: 1px solid darkgrey;
-    padding: 10px;
-}
+    .btn{
+        display: block;
+        margin: 0 auto;
+        color: $white;
+        background: $grey;
+        border: 1px solid darkgrey;
+        padding: 10px;
+    }
 
-article .btn:hover{
-    color: $white;
-    background: $red;
-    font-weight: bold;
-    box-shadow: 0px 0px 4px 2px rgba(255,255,255,0.75);
+    .btn:hover{
+        color: $white;
+        background: $red;
+        font-weight: bold;
+        box-shadow: 0px 0px 4px 2px rgba(255,255,255,0.75);
+    }
 }
 
 // article .btn:hover::after{
@@ -104,14 +115,34 @@ article .btn:hover{
 
 .meta{
     margin-top: 10px;
-}
 
-.meta p{
-    color: $lightgrey;
+    p{
+        color: $lightgrey;
+    }
 }
 
 .background-black{
     background: $black;
+}
+
+//Bottom
+.bottom{
+    background: rgba(255,255,255,.2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid $lighter;
+    margin-top: 20px;
+
+    ul{
+        padding: 0;
+        li{
+            list-style: none;
+        }
+    }
+
+    form .form-control{
+        margin-top: 10px;
+    }
 }
 
 //Footer

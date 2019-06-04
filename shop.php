@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Big Burger</title>
+        <title>Big Burger | Shop</title>
         <meta name="description" content="Quality burgers, fries and wraps">
         <!-- BOOTSTRAP -->
         <link
@@ -28,13 +28,12 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="mainNav">
-                        
-                        <div class="navbar-nav">
-                            <a href="index.php" class="nav-item nav-link">Home</a>
-                            <a href="shop.php" class="nav-item nav-link active">Shop</a>
-                            <a href="#" class="nav-item nav-link">Contact</a>
-                            <a href="#" class="nav-item nav-link mr-auto">Login</a>
-                        </div>
+                        <ul class="navbar-nav  d-flex flex-grow-1">
+                            <li><a class="nav-item nav-link" href="index.php">Home</a></li>
+                            <li><a class="nav-item nav-link active" href="shop.php">Shop</a></li>
+                            <li><a class="nav-item nav-link" href="#">Contact</a></li>
+                            <li class="ml-md-auto"><a class="nav-item nav-link" href="#">Login</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -47,15 +46,6 @@
         </header>
         <!-- MAIN -->
         <main>
-            <!-- <div class="row background-black">
-                <div class="col-lg-3 col-md-5">
-                    <h2>SHOP</h2>
-                </div>
-                <div class="col-lg-9 col-md-7">
-                    <p>See our selection of fantastic burgers, drinks and menus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis reiciendis doloremque. Molestias repellendus reiciendis ipsa laborum quisquam, praesentium beatae voluptatum dolorum incidunt hic optio aperiam excepturi esse nihil quia?</p>
-                </div>
-            </div> -->
-
             <!-- Articles -->
             <div class="row shop">
                 <article class="col-sm-6 col-lg-4 d-flex flex-column">
@@ -73,7 +63,7 @@
                 </article>
                 <article class="col-sm-6 col-lg-4 d-flex flex-column">
                     <img class="img-fluid" src="img/burger-2.png" alt="The Bigger Burger with extra crispy bacon">
-                    <div class=" d-flex flex-column flex-grow-1">
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Bigger Burger</h3>
                         <p>The badass Bigger Burger everything the Big Burger was and MORE! With tasty bacon, pickles and extra size.</p>
                         <h4 class="mt-auto">40.00 kr.</h4>
@@ -132,7 +122,7 @@
                     <img class="img-fluid" src="img/fries-1.png" alt="Fries made with Big Burger's secret spice mix">
                     <div class=" d-flex flex-column flex-grow-1">
                         <h3>Big Fries</h3>
-                        <p>Out own fries made with Big Burger's secret spice mix</p>
+                        <p>Our own fries made with Big Burger's secret spice mix</p>
                         <h4 class="mt-auto">25.00 kr.</h4>
                         <button class="btn">Buy</button>
                         <div class="meta">

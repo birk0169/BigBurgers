@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Big Burger</title>
         <meta name="description" content="Quality burgers, fries and wraps">
+
         <!-- BOOTSTRAP -->
         <link
             rel="stylesheet"
@@ -14,11 +15,13 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
         />
+
         <!-- Custom css -->
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
     <div class="container">
+
         <!-- HEADER -->
         <header>
             <nav class="navbar navbar-toggleable-sm navbar-expand-md navbar-inverse navbar-dark">
@@ -28,16 +31,22 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="mainNav">
-                        
-                        <div class="navbar-nav">
+                    <ul class="navbar-nav  d-flex flex-grow-1">
+                            <li><a class="nav-item nav-link active" href="index.php">Home</a></li>
+                            <li><a class="nav-item nav-link" href="shop.php">Shop</a></li>
+                            <li><a class="nav-item nav-link" href="#">Contact</a></li>
+                            <li class="ml-md-auto"><a class="nav-item nav-link" href="#">Login</a></li>
+                        </ul>
+                        <!-- <div class="navbar-nav d-flex flex-grow-1">
                             <a href="index.php" class="nav-item nav-link active">Home</a>
                             <a href="shop.php" class="nav-item nav-link">Shop</a>
                             <a href="#" class="nav-item nav-link">Contact</a>
-                            <a href="#" class="nav-item nav-link mr-auto">Login</a>
-                        </div>
+                            <a href="#" class="nav-item nav-link ml-md-auto">Login</a>
+                        </div> -->
                     </div>
                 </div>
             </nav>
+
             <!-- Header Image -->
             <div class="row">
                 <div class="col px-0">
@@ -45,6 +54,7 @@
                 </div>
             </div>
         </header>
+
         <!-- MAIN -->
         <main>
             <div class="row background-black">
@@ -55,28 +65,28 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatem officiis magnam ipsam odio officia cupiditate laborum cumque pariatur odit assumenda, aut nesciunt reiciendis ut, illum beatae, explicabo velit accusamus?</p>
                 </div>
             </div>
+
             <!-- Articles -->
-            
             <div class="row">
-                <article class="col-md-4">
+                <article class="col-md-4 d-flex flex-column">
                     <img class="img-fluid" src="img/burger-1.png" alt="The classic and tasty Big Burger">
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Big Burger</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus distinctio expedita quod porro consectetur? Quia error autem saepe ex ipsum officiis corrupti minima, blanditiis, debitis accusamus animi culpa veritatis!</p>
                         <button class="btn mt-auto">Buy</button>
                     </div>
                 </article>
-                <article class="col-md-4">
+                <article class="col-md-4 d-flex flex-column">
                     <img class="img-fluid" src="img/burger-2.png" alt="The Bigger Burger with extra crispy bacon">
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Bigger Burger</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus distinctio expedita quod porro consectetur? Quia error autem saepe ex ipsum officiis corrupti minima, blanditiis, debitis accusamus animi culpa veritatis!</p>
                         <button class="btn mt-auto">Buy</button>
                     </div>
                 </article>
-                <article class="col-md-4">
+                <article class="col-md-4 d-flex flex-column">
                     <img class="img-fluid" src="img/burger-3.png" alt="The fluffy and juicy Shroom Burger">
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Big Shroom Burger</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus distinctio expedita quod porro consectetur? Quia error autem saepe ex ipsum officiis corrupti minima, blanditiis, debitis accusamus animi culpa veritatis!</p>
                         <button class="btn mt-auto">Buy</button>
@@ -85,12 +95,46 @@
             </div>
         </main>
     </div>
+
+    <!-- Info -->
+    <div class="bottom ">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Job Oppertunities</a></li>
+                        <li><a href="#">Fresh salat</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col social">
+                    <ul>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Follow us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-7 news-letter">
+                    <form action="">
+                        <div class="form-group">
+                            <h3>Newsletter</h3>
+                            <input type="lastname" class="form-control" aria-describedby="emailHelp" placeholder="Enter firstname">
+                            <input type="firstname" class="form-control" aria-describedby="emailHelp" placeholder="Enter lastname">
+                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- FOOTER -->
     <footer>
         <h6>Adress: something 5b city</h6>
     </footer>
         
-
         <!-- JAVASCRIPT -->
         <!-- Bootstrap js -->
         <script
