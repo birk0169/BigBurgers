@@ -47,7 +47,11 @@
         <!-- MAIN -->
         <main>
             <!-- Articles -->
+            <!-- From SQL-->
             <div class="row shop">
+                <?php 
+                require_once "getArticles.php"
+                ?>
                 <article class="col-sm-6 col-lg-4 d-flex flex-column">
                     <img class="img-fluid" src="img/burger-1.png" alt="The classic and tasty Big Burger">
                     <div class=" d-flex flex-column flex-grow-1">
@@ -61,6 +65,7 @@
                         </div>
                     </div>
                 </article>
+                
                 <article class="col-sm-6 col-lg-4 d-flex flex-column">
                     <img class="img-fluid" src="img/burger-2.png" alt="The Bigger Burger with extra crispy bacon">
                     <div class="d-flex flex-column flex-grow-1">
