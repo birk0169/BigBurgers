@@ -21,7 +21,6 @@
     </head>
     <body>
     <div class="container">
-
         <!-- HEADER -->
         <header>
             <nav class="navbar navbar-toggleable-sm navbar-expand-md navbar-inverse navbar-dark">
@@ -32,10 +31,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav  d-flex flex-grow-1">
-                            <li><a class="nav-item nav-link active" href="index.php">Home</a></li>
-                            <li><a class="nav-item nav-link" href="shop.php">Shop</a></li>
-                            <li><a class="nav-item nav-link" href="#">Contact</a></li>
-                            <li class="ml-md-auto"><a class="nav-item nav-link" href="#">Login</a></li>
+                            <li><a class="pl-2 nav-item nav-link active" href="index.php">Home</a></li>
+                            <li><a class="pl-2 nav-item nav-link" href="shop.php">Shop</a></li>
+                            <li><a class="pl-2 nav-item nav-link" href="#">Contact</a></li>
+                            <li class="ml-md-auto"><a class="pl-2 nav-item nav-link" href="#">Login</a></li>
                         </ul>
                         <!-- <div class="navbar-nav d-flex flex-grow-1">
                             <a href="index.php" class="nav-item nav-link active">Home</a>
