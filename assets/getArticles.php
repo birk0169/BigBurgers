@@ -7,7 +7,7 @@
     $statement->execute();
 
     //While there is rows remaining in $statement the loop continues
-    while($row = $statement->fetch()){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){
         ?>
             <article class="col-sm-6 col-lg-4 d-flex flex-column">
                     <!-- image -->

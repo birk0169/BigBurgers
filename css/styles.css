@@ -103,6 +103,10 @@ article .btn:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.form-control option {
+  color: #495057;
+}
+
 .bottom {
   background: rgba(255, 255, 255, 0.2);
   padding-top: 10px;

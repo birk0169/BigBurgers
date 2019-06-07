@@ -50,7 +50,7 @@
             <!-- From SQL-->
             <div class="row shop">
                 <?php 
-                require_once "getArticles.php"
+                require_once "assets/getArticles.php"
                 ?>
                 <article class="col-sm-6 col-lg-4 d-flex flex-column">
                     <img class="img-fluid" src="img/burger-1.png" alt="The classic and tasty Big Burger">
