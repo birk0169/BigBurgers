@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Big Burger | Shop</title>
+        <title>Big Burger | New Product</title>
         <meta name="description" content="Quality burgers, fries and wraps">
         <!-- BOOTSTRAP -->
         <link
@@ -49,14 +49,16 @@
             <h2>New Product</h2>
             <form class="row" action="assets/addProduct.php" method="post">
                 <!--Sets Heading/Product name-->
-                <div class="col-md-6 form-group">
+                <div class="col-md-12 form-group">
                     <label for="heading">Heading</label>
                     <input class="form-control" id="heading" type="text" name="heading" placeholder="Heading here..." required>
                 </div>
                 <!--Sets Content-->
-                <div class="col-md-6 form-group">
+                <div class="col-md-12 form-group">
                     <label for="content">Content</label>
-                    <input class="form-control" id="content" type="text" name="content" placeholder="Content here..." required>
+                    <textarea class="form-control rounded-1" id="exampleFormControlTextarea1 content" rows="5" type="textarea" name="content" placeholder="Content here..." required></textarea>
+                    <!--<input class="form-control" id="content" type="textarea" name="content" placeholder="Content here..." required>-->
+                    
                 </div>
                 <!--Sets Category-->
                 <div class="col-md-6 form-group">

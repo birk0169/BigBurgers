@@ -22,7 +22,7 @@
                         <!-- meta: timestamp, author and catagory -->
                         <div class="meta">
                             <p><?php echo $row['timeStamp']; ?>: By <?php echo $row['authorId']; ?></p>
-                            <p>Catagory: <?php echo $row['categoryId']; ?></p>
+                            <p>Catagory: <?php /*echo $row['categoryId'];*/ ?></p>
                         </div>
                     </div>
                 </article>
