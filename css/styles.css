@@ -13,6 +13,16 @@ h1, h2, h3, h4, h5, h6, a {
   font-style: italic;
 }
 
+.errorMsg {
+  text-align: center;
+  color: #d60004;
+  font-size: 1.5rem;
+}
+
+.hide {
+  display: none;
+}
+
 body {
   background: url(../img/background.jpg);
   background-position: cover;
@@ -51,6 +61,10 @@ body {
 body .header-image {
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.login form {
+  width: 33%;
 }
 
 article {
@@ -134,5 +148,67 @@ footer {
   bottom: 0px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.login fadein {
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+}
+
+.login fadeout {
+  -webkit-animation-name: fadeout;
+          animation-name: fadeout;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(startYposition);
+            transform: translateY(startYposition);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(endYposition);
+            transform: translateY(endYposition);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(startYposition);
+            transform: translateY(startYposition);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(endYposition);
+            transform: translateY(endYposition);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(startYposition);
+            transform: translateY(startYposition);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(endYposition);
+            transform: translateY(endYposition);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(startYposition);
+            transform: translateY(startYposition);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(endYposition);
+            transform: translateY(endYposition);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

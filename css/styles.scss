@@ -25,6 +25,16 @@ h1, h2, h3, h4, h5, h6, a{
     font-style: italic;
 }
 
+.errorMsg{
+    text-align: center;
+    color: $red;
+    font-size: 1.5rem;
+}
+
+.hide{
+    display: none;
+}
+
 //Body
 body{
     background: url(../img/background.jpg);
@@ -40,6 +50,7 @@ body{
 .logo{
     max-height: 100px;
 }
+
 
 .navbar-dark{
     .navbar-toggler{
@@ -69,6 +80,10 @@ body .header-image{
     border-top: 1px solid $lighter;
 }
 
+//login
+.login form{
+    width: 33%;
+}
 
 //Main
 
@@ -158,4 +173,35 @@ footer{
     bottom: 0px;
     padding: 20px;
     background-color:rgba(0,0,0,0.8);
+}
+
+//Animation WIP
+.login fadein{
+    animation-name: fadein;
+}
+
+.login fadeout{
+    animation-name: fadeout;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(startYposition);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(endYposition);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(startYposition);
+    } 
+    100% {
+        opacity: 0;
+        transform: translateY(endYposition);
+    }
 }

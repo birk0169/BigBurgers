@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     if($_POST['heading']){
         //Set variables for product to input values
@@ -6,11 +7,14 @@
             $heading = $_POST['heading'];
             $content = $_POST['content'];
             $category = $_POST['category'];
-            $authorId = $_POST['authorId'];
+            //$authorId = $_POST['authorId'];
             $imgSrc = $_POST['imgSrc'];
             $imgAlt = $_POST['imgAlt'];
             $price = $_POST['price'];
             $time = time();
+
+            $authorId = $_SESSION['id'];
+
 
             //Database connection
             require_once "connect.php";

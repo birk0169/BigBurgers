@@ -1,13 +1,17 @@
 <?php 
     //connect to Database
-    require_once "connect.php";
+    require "connect.php";
 
     //Pull data from products table
-    $statement = $dbh->prepare("SELECT * FROM products ORDER BY id DESC");
+    $statement = $dbh->prepare("SELECT products.*, users.dbUsername FROM products 
+    JOIN users ON products.authorId = users.id ORDER BY id DESC");
     $statement->execute();
 
     //While there is rows remaining in $statement the loop continues
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
+        // echo "<pre style='color: white'>";
+        // print_r($row);
+        // echo "</pre>";
         ?>
             <article class="col-sm-6 col-lg-4 d-flex flex-column">
                     <!-- image -->
@@ -21,9 +25,17 @@
                         <button class="btn">Buy</button>
                         <!-- meta: timestamp, author and catagory -->
                         <div class="meta">
-                            <p><?php echo $row['timeStamp']; ?>: By <?php echo $row['authorId']; ?></p>
+                            <p class="time"><?php echo date("Y-m-d", $row['timeStamp']); ?>: By <?php echo $row['dbUsername']; ?></p>
                             <p>Catagory: <?php /*echo $row['categoryId'];*/ ?></p>
                         </div>
+                        <?php 
+                            if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+                                if($_SESSION['accessLevel'] == 1){
+                                    echo "<a class='btn btn-danger' href='deleteArticle.php?id=".$row['id']."'>Delete</a>";
+                                }
+                            }
+                            
+                        ?>
                     </div>
                 </article>
         <?php

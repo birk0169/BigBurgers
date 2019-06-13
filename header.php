@@ -1,3 +1,7 @@
+<?php
+//Start session 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,8 +9,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Big Burger</title>
-        <meta name="description" content="Quality burgers, fries and wraps">
+        <title><?php echo $title ?> | Big Burger</title>
+        <meta name="description" content="<?php echo $desc ?>">
 
         <!-- BOOTSTRAP -->
         <link
@@ -18,6 +22,9 @@
 
         <!-- Custom css -->
         <link rel="stylesheet" href="css/styles.css" />
+        <!-- TinyMCE -->
+        <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+        <script>tinymce.init({selector:'textarea'});</script> -->
     </head>
     <body>
     <div class="container">
@@ -31,11 +38,23 @@
                     </button>
                     <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav  d-flex flex-grow-1">
-                            <li><a class="pl-2 nav-item nav-link active" href="index.php">Home</a></li>
-                            <li><a class="pl-2 nav-item nav-link" href="shop.php">Shop</a></li>
-                            <li><a class="pl-2 nav-item nav-link" href="#">Contact</a></li>
-                            <li class="ml-md-auto"><a class="pl-2 nav-item nav-link" href="#">Login</a></li>
+                            <li><a class="pl-2 nav-item nav-link <?php echo $title === "Home" ? "active" :  "";  ?>" href="index.php">Home</a></li>
+                            <li><a class="pl-2 nav-item nav-link <?php echo $title === "Shop" ? "active" :  "";  ?>" href="shop.php">Shop</a></li>
+                            <li><a class="pl-2 nav-item nav-link <?php echo $title === "Contact" ? "active" :  "";  ?>" href="#">Contact</a></li>
+                            <li class="ml-md-auto d-md-flex">
+                                <?php
+                                    if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+                                        echo '<a class="pl-2 nav-item nav-link" href="assets/logout.php"> '.$_SESSION['username'].' - Logout</a>';
+                                    }else{
+                                        echo '<a id="toggle-login" class="pl-2 nav-item nav-link" href="#">Login</a>';
+                                        //Note: Add a active class here \/ at some point
+                                        echo '<a class="pl-2 nav-item nav-link" href="register.php">Make Account</a>';
+                                    }
+                                //<a id="toggle-login" class="pl-2 nav-item nav-link" href="#">Login</a>
+                                ?>
+                            </li>
                         </ul>
+                        
                         <!-- <div class="navbar-nav d-flex flex-grow-1">
                             <a href="index.php" class="nav-item nav-link active">Home</a>
                             <a href="shop.php" class="nav-item nav-link">Shop</a>
@@ -45,6 +64,22 @@
                     </div>
                 </div>
             </nav>
+            <!-- Login box -->
+            <div class="login hide row flex-row-reverse">
+                <form class="m-2 col-md-4 col" action="login.php" method="post">
+                    <div class="form-group">
+                        <label for="formUsername">Input Username</label>
+                        <input class="form-control" type="text" name="formUsername" id="formUsername">
+                    </div>
+                    <div class="form-group">
+                        <label for="formPassword">Input Username</label>
+                        <input class="form-control" type="password" name="formPassword" id="formPassword">
+                    </div>
+                    <div class="mr-auto form-group">
+                        <input class="btn btn-primary" type="submit" value ="login">
+                    </div>
+                </form>
+            </div>
 
             <!-- Header Image -->
             <div class="row">

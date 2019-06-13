@@ -1,4 +1,15 @@
-<?php require "header.php" ?>
+<?php
+    $title = "Home";
+    $desc = "Quality burgers, fries and wraps";
+    // session_start();
+    // if(isset($_SESSION['username'])){
+    //     echo "<p> Username : ".$_SESSION['username']."</p>";
+    // } else{
+    //     echo "<p>steve</p>";
+    // }
+
+    require "header.php" 
+ ?>
 
         <!-- MAIN -->
         <main>
@@ -39,4 +50,6 @@
                 </article>
             </div>
         </main>
-        <?php require "footer.php" ?>
+<?php
+    require "footer.php" 
+ ?>
