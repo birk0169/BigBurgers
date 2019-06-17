@@ -184,7 +184,7 @@ $desc = "Buy from our wide selection of big burger products";
                 </article>
 
                 <article class="col-sm-6 col-lg-4  d-flex flex-column">
-                    <img class="img-fluid" src="img/menu-1.png" alt="A Big Burger, a large Soda and large fries">
+                    <img class="img-fluid" src="img/menu-2.png" alt="A Big Burger, a large Soda and large fries">
                     <div class=" d-flex flex-column flex-grow-1">
                         <h3>Big Burger Menu</h3>
                         <p>A Big Burger, a large Soda and large fries</p>

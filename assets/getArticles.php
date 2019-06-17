@@ -22,16 +22,21 @@
                         <!-- content -->
                         <p><?php echo $row['content']; ?></p>
                         <h4 class="mt-auto"><?php echo $row['price']; ?> kr.</h4>
-                        <button class="btn">Buy</button>
+                        <button class="btn">Order</button>
                         <!-- meta: timestamp, author and catagory -->
                         <div class="meta">
-                            <p class="time"><?php echo date("Y-m-d", $row['timeStamp']); ?>: By <?php echo $row['dbUsername']; ?></p>
+                            <p class="time"><?php /* setlocale(LC_ALL, "danish") */ echo date("Y-m-d", $row['timeStamp']); ?>: By <?php echo $row['dbUsername']; ?></p>
                             <p>Catagory: <?php /*echo $row['categoryId'];*/ ?></p>
                         </div>
                         <?php 
                             if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+                                //Level 1 users can delete any article
                                 if($_SESSION['accessLevel'] == 1){
-                                    echo "<a class='btn btn-danger' href='deleteArticle.php?id=".$row['id']."'>Delete</a>";
+                                    echo "<a class='btn delete-button' href='delete-article.php?id=".$row['id']."'>Delete</a>";
+                                }
+                                //Level 2 users can only delete their own articles
+                                else if($_SESSION['accessLevel'] == 2 && $row['dbUsername'] == $_SESSION['username']){
+                                    echo "<a class='btn delete-button' href='delete-article.php?id=".$row['id']."'>Delete</a>";
                                 }
                             }
                             
@@ -41,4 +46,3 @@
         <?php
     }
     $dbh = null;
-?>
