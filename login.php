@@ -15,10 +15,12 @@ $formPassword = $_POST['formPassword'];
 require_once "assets/connect.php";
 
 //Get all users
-$statement = $dbh->prepare("SELECT * FROM users WHERE dbUSername = ? AND dbPassword = ?");
+//$statement = $dbh->prepare("SELECT * FROM users WHERE dbUSername = ? AND dbPassword = ?");
+$statement = $dbh->prepare("SELECT * FROM users WHERE dbUSername = ?");
+//Hash password
 //bind paremeters
 $statement->bindParam(1, $formUsername);
-$statement->bindParam(2, $formPassword);
+// $statement->bindParam(2, $hashedPassword);
 //Execute statement
 $statement->execute();
 
@@ -28,15 +30,19 @@ if(empty($row = $statement->fetch()) ){
     echo "<p class=\"errorMsg\">incorrect username or/and password!</p>";
     header("Refresh:5; url=index.php", true, 303);
 } else{
-    //Valid login
+    
     //Start session
-    $_SESSION['username'] = $row['dbUsername'];
-    $_SESSION['accessLevel'] = $row['accessLevel'];
-    $_SESSION['id'] = $row['id'];
+    //Validate login
+    if(password_verify($formPassword, $row['dbPassword'])){
+        $_SESSION['username'] = $row['dbUsername'];
+        $_SESSION['accessLevel'] = $row['accessLevel'];
+        $_SESSION['id'] = $row['id'];
+        header('location:index.php');
+    }
 
     // echo "correct login";
     // header("Refresh:5; url=index.php", true, 303);
-    header('location:index.php');
+    
 }
 
 $dbh = null;

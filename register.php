@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     $title = "Register";
     $desc = "Register new user";
     require "header.php";
@@ -7,11 +8,10 @@
     if(isset($_SESSION['username'])){
         header("location: index.php");
     }
-?>
-
+    echo '
     <main>
         <h2>New Account</h2>
-        <form id="register" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <form id="register" action="'. $_SERVER['PHP_SELF'].'" method="post">
             <div class="form-group">
                 <label for="formNewUsername">Input Username</label>
                 <input id="formNewUsername" name="formNewUsername" class="form-control" type="text" placeholder="input username" required>
@@ -27,8 +27,7 @@
             <input class="btn btn-large btn-primary" type="submit" value="Submit">
         </form>
     </main>
-
-<?php
+';
 
 
    
@@ -63,11 +62,13 @@
         else{
             echo "<p class='successMsg'>Confirmed - User saved.</p>";
             $statement = $dbh->prepare("INSERT INTO users(dbUsername, dbPassword) VALUES(?, ?)");
+            //Hash password
+            $hashedPassword = password_hash($formPassword1, PASSWORD_DEFAULT);
             //Bind paremeters
             $statement->bindParam(1, $formUsername);
-            $statement->bindParam(2, $formPassword1);
-            $statement->execute();
-            //header("Refresh:3; url=index.php", true, 303);
+            $statement->bindParam(2, $hashedPassword);
+            //$statement->execute();
+            header('location:index.php');
         }
     }
 
