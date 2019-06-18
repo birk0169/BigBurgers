@@ -66,7 +66,7 @@ session_start();
             </nav>
             <!-- Login box -->
             <div class="login hide row flex-row-reverse">
-                <form class="m-2 col-md-4 col" action="login.php" method="post">
+                <form class="m-2 col-md-4 col" action="login.php?<?php echo "URL=".basename($_SERVER['PHP_SELF']);?>" method="post">
                     <div class="form-group">
                         <label for="formUsername">Input Username</label>
                         <input class="form-control" type="text" name="formUsername" id="formUsername">

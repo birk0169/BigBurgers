@@ -1,5 +1,6 @@
+<?php
+ob_start();
 
-<?php 
 $title = "Login";
 $desc = "Login";
 require "header.php";
@@ -9,7 +10,10 @@ require "header.php";
 //Catch data from login form
 $formUsername = $_POST['formUsername'];
 $formPassword = $_POST['formPassword'];
-// echo $formUsername." ".$formPassword;
+
+//Catch URL
+$URL = $_GET['URL'];
+//echo $URL;
 
 //Connect to DB
 require_once "assets/connect.php";
@@ -28,7 +32,7 @@ $statement->execute();
 if(empty($row = $statement->fetch()) ){
     //Invalid login
     echo "<p class=\"errorMsg\">incorrect username or/and password!</p>";
-    header("Refresh:5; url=index.php", true, 303);
+    header('Refresh:5; url='.$URL , true, 303);
 } else{
     
     //Start session
@@ -37,7 +41,7 @@ if(empty($row = $statement->fetch()) ){
         $_SESSION['username'] = $row['dbUsername'];
         $_SESSION['accessLevel'] = $row['accessLevel'];
         $_SESSION['id'] = $row['id'];
-        header('location:index.php');
+        header('location:'.$URL);
     }
 
     // echo "correct login";
