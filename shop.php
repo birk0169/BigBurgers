@@ -10,7 +10,7 @@ $desc = "Buy from our wide selection of big burger products";
                     ?>
                     <!-- Create Product -->
                         <h2>New Product</h2>
-                        <form class="row" action="assets/addProduct.php" method="post">
+                        <form class="row" action="assets/addProduct.php" method="post" enctype="multipart/form-data">
                             <!--Sets Heading/Product name-->
                             <div class="col-md-12 form-group">
                                 <label for="heading">Heading</label>
@@ -33,7 +33,7 @@ $desc = "Buy from our wide selection of big burger products";
                                     ?>
                                 </select>
                             </div>
-                            <!--Sets AuthorId -->
+                            <!--Sets AuthorId : No longer needed -->
                             <!-- <div class="col-md-6 form-group">
                                 <label for="authorId">Author</label>
                                 <input class="form-control" id="authorId" type="number" name="authorId" placeholder="AuthorId here..." required>
@@ -41,7 +41,7 @@ $desc = "Buy from our wide selection of big burger products";
                             <!--Sets Image source -->
                             <div class="col-md-6 form-group">
                                 <label for="imgSrc">Image Source</label>
-                                <input class="form-control" id="imgSrc" type="text" name="imgSrc" placeholder="ImgSrc here..." required>
+                                <input class="form-control" id="imgSrc" type="file" name="imgSrc" placeholder="ImgSrc here..." required>
                             </div>
                             <!--Sets Image Alt text -->
                             <div class="col-md-6 form-group">

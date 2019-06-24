@@ -31,7 +31,7 @@
                 <!--Sets Image source -->
                 <div class="col-md-6 form-group">
                     <label for="imgSrc">Image Source</label>
-                    <input class="form-control" id="imgSrc" type="text" name="imgSrc" placeholder="ImgSrc here..." required>
+                    <input class="form-control" id="imgSrc" type="file" name="imgSrc" placeholder="ImgSrc here..." required>
                 </div>
                 <!--Sets Image Alt text -->
                 <div class="col-md-6 form-group">
